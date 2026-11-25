@@ -1,31 +1,26 @@
-select.form-control:not([multiple]) {
-  appearance: menulist-button !important;
-}
-a.consent-link {
-  color: red;
-}
+select.form-control:not([multiple]) { appearance: menulist-button !important; }
+a.consent-link { color: red; }
+.parent99 video { width: 100%; margin-bottom: 10px; }
+.demo-img { border: 1px solid; width: 120px; margin: 10px; }
 /* =====================================================
- The "account masthead" bar across the top of the site
- ===================================================== */
-.module-search{
+   The "account masthead" bar across the top of the site
+   ===================================================== */
+.module-search {
   padding-bottom: 4px !important;
   margin-bottom: 10px;
 }
 .account-masthead {
-  background-color: #29AB87 !important;
+  background-color: #3B5794 !important;
 }
-/* The "bubble" containing the number of new notifications. */
 .account-masthead .account .notifications a span {
   background-color: black !important;
 }
-/* The text and icons in the user account info. */
 .account-masthead .account ul li a {
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
-/* The user account info text and icons, when the user's pointer is hovering over them. */
 .account-masthead .account ul li a:hover {
-  color: rgba(255, 255, 255, 0.7) !important;
-  background-color: black !important;
+  color: #fff !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .tib_dropdown {
   background: none !important;
@@ -33,7 +28,7 @@ a.consent-link {
   padding: 9px 17px !important;
 }
 .tib_dropdown:hover {
-  background: rgb(48, 48, 48) !important;
+  background: rgba(0,0,0,0.1) !important;
   color: #fff !important;
   font-weight: normal !important;
 }
@@ -44,23 +39,17 @@ a.consent-link {
   color: black !important;
   border: none;
   text-align: left;
-  padding: 0 8px;
+  padding: 0px 8px;
   text-decoration: none !important;
 }
 .tib_dropdown_item:hover {
   background: #f2f2f2;
 }
 .tib_dropdown.active {
-  background: rgb(74, 74, 74) !important;
+  background: #2D4373 !important; 
   color: #fff !important;
 }
-.dropdown.open {
-  background: rgb(74, 74, 74) !important;
-  color: #fff !important;
-}
-.dropdown.open button, .dropdown button {
-  color: #fff !important;
-}
+
 #dropdownMenu2.dropdown-toggle::after {
   display: inline-block;
   width: 0;
@@ -76,77 +65,186 @@ a.consent-link {
 .dropdown-toggle:empty::after {
   margin-left: 0;
 }
+
 /* ========================================================================
    The main masthead bar that contains the site logo, nav links, and search
    ======================================================================== */
-.box{
+.box {
   border-radius: 22px !important;
   background-color: #ffffffab !important;
   margin-bottom: 18px;
 }
-.module-heading{
+.module-heading {
   border-radius: 22px !important;
 }
 @media (min-width: 768px) {
   .main {
     padding-top: 45px;
-    background-color: #29AB87 !important;
+    background-color: #3B5794 !important; 
   }
 }
 .masthead {
-  background-color: #40826D !important;
+  background-color: #FFFFFF !important;
+  border-bottom: 3px solid #C6D83F !important; 
 }
-/* The "navigation pills" in the masthead (the links to Datasets, Organizations, etc) when the user's pointer hovers over them. */
-.masthead .navigation .nav-pills li a:hover {
-  background-color: rgb(48, 48, 48) !important;
-  color: white !important;
+
+/* ========================================================================
+   Masthead Navigation Bar (Nuking all grey/white/blue boxes & states)
+   ======================================================================== */
+.masthead .navigation .nav-pills > li > a,
+.masthead .navigation .nav-pills > li.active > a,
+.masthead .navigation .nav-pills > li.open > a,
+.masthead .navigation .nav-pills > li.dropdown > a,
+.masthead .navigation .nav-pills > li:hover > a,
+.masthead .navigation .nav-pills > li > a:hover,
+.masthead .navigation .nav-pills > li > a:focus,
+.masthead .navigation .nav-pills > li.active > a:hover,
+.masthead .navigation .nav-pills > li.active > a:focus,
+.masthead .navigation .nav-pills > li.open > a:hover,
+.masthead .navigation .nav-pills > li.open > a:focus {
+  background-color: transparent !important;
+  background: none !important;
+  color: #3B5794 !important;
+  font-weight: bold !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
-/* The "active" navigation pill (for example, when you're on the /dataset page the "Datasets" link is active). */
-.masthead .navigation .nav-pills li.active a {
-  background-color: rgb(74, 74, 74) !important;
+
+.masthead .navigation .nav-pills > li > a .caret,
+.masthead .navigation .nav-pills > li.active > a .caret,
+.masthead .navigation .nav-pills > li.open > a .caret {
+  border-top-color: #3B5794 !important;
+  border-bottom-color: #3B5794 !important;
 }
-/* The "box shadow" effect that appears around the search box when it has the keyboard cursor's focus. */
-.masthead input[type="text"]:focus {
-  -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.7) !important;
-  box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.7) !important;
-  color: black !important;
+
+.masthead .navigation .dropdown-menu {
+  background-color: #ffffff !important;
+  border: 1px solid #ccc !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
 }
+.masthead .navigation .dropdown-menu > li > a {
+  color: #4B4B4B !important;
+  font-weight: normal !important;
+  background-color: transparent !important;
+}
+.masthead .navigation .dropdown-menu > li > a:hover {
+  background-color: #f2f2f2 !important;
+  color: #3B5794 !important;
+}
+
+/* Target the Datasets dropdown button and any similar buttons in the navigation */
+.masthead .navigation .btn,
+.masthead .navigation button,
+#dropdownMenu2.dropdown-toggle {
+  background-color: transparent !important;
+  background: none !important;
+  color: #3B5794 !important;
+  font-weight: bold !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border: none !important;
+  padding-top: 10px;
+}
+
+.masthead .navigation .btn:hover,
+.masthead .navigation .btn:focus,
+.masthead .navigation .btn:active,
+#dropdownMenu2.dropdown-toggle:hover,
+#dropdownMenu2.dropdown-toggle:focus,
+#dropdownMenu2.dropdown-toggle:active {
+  background-color: transparent !important;
+  color: #3B5794 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
 /* ===========================================
    The content in the middle of the front page
    =========================================== */
-/* Remove the "box shadow" effect around various boxes on the page. */
 .search-giant input {
   border-color: transparent !important;
 }
 .search-giant {
   margin-bottom: 5px !important;
 }
-.box {
-  box-shadow: none !important;
-}
 .card.box {
   padding-top: 12px;
 }
-/* Remove the borders around the "Welcome to CKAN" and "Search Your Data" boxes. */
-.hero .box {
-  border: none !important;
-}
-/* Change the colors of the "Search Your Data" box. */
+
+/* =====================================================
+   Search Box & Icons Update (Frosted Glass & Branding)
+   ===================================================== */
+/* 1. Make the inner search container invisible so we only have ONE glass box */
 .homepage .module-search .module-content {
-  color: rgb(68, 68, 68) !important;
-  background-color: #ffffffab !important;
-  border-radius:22px !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important; 
 }
-/* Change the background color of the "Popular Tags" box. */
+
+/* 2. Keep the search input box popping with a white background and blue border */
+.masthead input[type="text"],
+.homepage .module-search input[type="text"] {
+  background-color: #ffffff !important;
+  border: 2px solid #3B5794 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+  color: #333333 !important;
+}
+
+.masthead input[type="text"]:focus,
+.homepage .module-search input[type="text"]:focus {
+  border-color: #3B5794 !important;
+  box-shadow: 0 0 10px rgba(59, 87, 148, 0.3) !important;
+}
+
+/* 3. Apply the beautiful blue glass to the OUTERMOST container only */
+
+.homepage .hero .box {
+  background-color: #F0F4F8 !important; /* Solid light blue-grey (no transparency) */
+  border: 1px solid #D9E2EC !important; /* Solid subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important; /* Keeps the drop shadow */
+  border-radius: 22px !important;
+  padding: 25px !important;
+  margin-top: 20px !important; 
+}
+
+/* 4. Ensure all links, icons, spans, and OTHER text elements stay Deep Blue */
+.homepage .hero .box a,
+.homepage .hero .box span,
+.homepage .hero .box i,
+.homepage .hero .box svg,
+.homepage .hero .box p,
+.homepage .hero .box div,
+.homepage .hero .box li,
+.homepage .hero .box ul,
+.homepage .hero .box strong,
+.homepage .hero .box b,
+.homepage .hero .box small {
+  color: #3B5794 !important;
+  fill: #3B5794 !important;
+}
+
+.homepage .hero .box a:hover,
+.homepage .hero .box a:hover span,
+.homepage .hero .box a:hover i,
+.homepage .hero .box a:hover svg {
+  color: #a8bf29 !important; /* Green hover effect */
+  fill: #a8bf29 !important;
+  text-decoration: none !important;
+}
 .homepage .module-search .tags {
-  background-color: rgb(61, 61, 61) !important;
+  background-color: #888888 !important; 
 }
-.homepage{
-  background-color: #29AB87 !important;
+.homepage {
+  background-color: #3B5794 !important; 
 }
 @media (min-width: 768px) {
   .hero {
-    background: url("../../images/background-tile.png") bottom;
+    background: url("../../images/background-tile.png");
+    background-position: bottom;
     background-size: cover;
   }
 }
@@ -154,7 +252,7 @@ a.consent-link {
    The header at the top of the site
    ==================================== */
 .styled_header_login_bar {
-  background-color: #666;
+  background-color: #2a2a2a; 
   height: 30px;
 }
 .img-responsive {
@@ -167,22 +265,22 @@ a.consent-link {
 .header_ldm_logo_bar {
   margin-bottom: -21px;
 }
+
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
 .site-footer,
 body {
-  background: #296f56 url("../../../base/images/bg.png");
+  background: url("../../../base/images/bg.png");
+  background-color: #333333 !important; 
 }
-/* The text in the footer. */
 .site-footer,
 .site-footer label,
 .site-footer small {
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
 }
-/* The link texts in the footer. */
 .site-footer a {
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: #9AB2E5 !important; 
 }
 .list-inline > li {
   display: inline-block;
@@ -192,34 +290,38 @@ body {
   vertical-align: top;
   margin-top: 20px;
 }
+
 /* ====================================
    About Page Styles
    ==================================== */
 .ldm_about_foot {
-  filter: alpha(opacity = 95);
-  -ms-filter: "alpha(opacity = 95)";
+  background-color: #333333;
+  filter: alpha(opacity=95);
+  -ms-filter: "alpha(opacity=95)";
   opacity: .90;
-  background: #4B4B4B linear-gradient(#7e7a7a, #BABABA);
+  background: linear-gradient(#3B5794, #333333); 
   margin-top: -20px;
   padding: 20px;
   color: #FAFAFA;
-  box-shadow: 1px 4px 8px rgba(0,0,0,0.5);
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.5);
 }
+
 /* ====================================
    Virtual Datasets Styles
    ==================================== */
-.label-dataset-box, .label-vdataset-box, .label-service-box  {
+.label-dataset-box, .label-vdataset-box, .label-service-box {
   font-size: 100% !important;
   padding: 5px 8px !important;
 }
 .label-dataset-box {
-  background-color: #18a8f5 !important;
+  background-color: #3B5794 !important; 
 }
 .label-vdataset-box {
-  background-color: #f5c118 !important;
+  background-color: #C6D83F !important; 
+  color: #222 !important; 
 }
 .label-service-box {
-  background-color: #1cd49c !important;
+  background-color: #888888 !important; 
 }
 img.object-type {
   float: right;
@@ -236,7 +338,7 @@ img.object-type {
   margin-bottom: 10px;
 }
 .dataset-item {
-  border-bottom: 1px dotted #444b42 !important;
+  border-bottom: 1px dotted #888888 !important;
   border-radius: 22px;
 }
 .dataset-item:last-of-type {
@@ -244,7 +346,7 @@ img.object-type {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
-.wrapper{
+.wrapper {
   background-color: #ffffffab !important;
 }
 @media (min-width: 768px) {
@@ -256,7 +358,7 @@ img.object-type {
     bottom: 0;
     left: 0;
     width: 25%;
-    border-right: 1px dotted #444b42;
+    border-right: 1px dotted #888888;
     z-index: 1;
   }
 }
@@ -264,8 +366,9 @@ img.object-type {
   color: #e1e1e1;
 }
 .tag-list {
-  background-color: #40826D;
+  background-color: #C6D83F; 
   border-radius: 22px;
+  color: #222;
 }
 .page-header {
   background-color: transparent;
@@ -274,15 +377,14 @@ img.object-type {
   position: relative;
   padding: 0 0.5em;
   font-size: 1em;
-  margin: 0 0 20px -0.25em;
+  margin: 0 0 0 -0.25em;
   line-height: 1.875em;
-  color: #e6e2c8;
+  color: #fff;
   border-radius: 0 0.156em 0.156em 0;
-  background: rgb(123, 159, 199);
+  background: #3B5794; 
   box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.5);
   width: 45%;
   top: 6px;
-  font-weight: 700;
 }
 .ribbon:before, .ribbon:after {
   position: absolute;
@@ -308,7 +410,7 @@ img.object-type {
   box-shadow: inset -1px 2px 2px rgba(0, 0, 0, 0.3);
 }
 .ribbon.rdr {
-  background: #a62055;
+  background: #888888; 
 }
 .module.module-narrow.module-shallow.export {
   margin-top: 10px !important;
@@ -322,56 +424,53 @@ img.object-type {
   height: auto;
 }
 .ribbon.png {
-  background: #009c8f;
+  background: #3B5794;
   width: 65%;
 }
 .ribbon.leo {
-  background: #003f57;
+  background: #888888;
   width: 65%;
 }
 .ribbon.osn {
-  background: #ac1035;
+  background: #333333;
   width: 65%;
 }
 .ribbon.goe {
-  background: #1a3771;
+  background: #C6D83F;
+  color: #222;
   width: 65%;
 }
 .ribbon.leu {
-  background: #912631;
+  background: #2D4373;
   width: 65%;
 }
 .parent99 {
-  overflow: hidden; /* required */
+  overflow: hidden; 
   width: 100%;
-  position: relative; /* required  for demo*/
+  position: relative; 
   padding-left: 3%;
-}
-.parent99 video {
-  width: 100%;
-  margin-bottom: 10px;
 }
 .ribbon99 {
   margin: 0;
-  background: #fab143;
-  color: white;
+  padding: 0;
+  background: #C6D83F; 
+  color: #222;
   padding: 0.2em 0;
   position: absolute;
   top: 0;
   right: 0;
   transform: translateX(30%) translateY(0%) rotate(45deg);
   transform-origin: top left;
-  font-weight: 700;
 }
 .ribbon99:before,
 .ribbon99:after {
   content: '';
   position: absolute;
   top: 0;
-  margin: 0 -1px; /* tweak */
+  margin: 0 -1px; 
   width: 100%;
   height: 100%;
-  background: #fab143;
+  background: #C6D83F;
 }
 .ribbon99:before {
   right: 100%;
@@ -379,8 +478,8 @@ img.object-type {
 .ribbon99:after {
   left: 100%;
 }
-/* Styles for TIB Dataset Selection tool (scheming plugin)
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* Styles for TIB Dataset Selection tool */
 .panel-heading a.btn_help {
   float: right;
   padding: 1px 6px;
@@ -419,12 +518,13 @@ img.object-type {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid rgba(0, 0, 0, .125);
   border-radius: .25rem;
 }
 a.btn_check_all {
   margin: 0 !important;
-  padding: 0;
+  margin-left: 0px;
+  padding: 0px;
   margin-left: 3px !important;
   margin-bottom: 3px !important;
   background-color: #EEE !important;
@@ -433,6 +533,7 @@ a.btn_check_all {
   height: 155px;
   overflow: scroll;
 }
+
 /* ********** Authors ******************************************/
 .input_orcid {
   padding-left: 32px !important;
@@ -446,9 +547,27 @@ a.btn_check_all {
 .orcid_display_img {
   width: 20px;
 }
+
 /* ************ update resources tool **************************/
+/* ==========================================================
+   Disabled Form Fields (Readable & Theme-Matching)
+   ========================================================== */
+
+/* 1. Make the disabled label darker and readable */
 label.ur_form_disabled {
-  color: #CCC;
+  color: #6B7A90 !important; /* A readable slate-blue/gray instead of #CCC */
+  font-style: italic; /* Helps visually signify it's inactive */
+}
+
+/* 2. Make the disabled input box visible but distinct from active boxes */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: #E8ECEF !important; /* A soft, visible light gray/blue */
+  color: #555555 !important; /* Darker text so any existing URLs can be read */
+  border: 1px dashed #B0C4DE !important; /* A dashed border clearly shows it's locked */
+  cursor: not-allowed !important; 
+  opacity: 0.8 !important; 
 }
 /*****************Cookie accept Bar ****************************/
 .cookieAcceptBar {
@@ -459,23 +578,24 @@ label.ur_form_disabled {
   right: 0;
   font-family: sans-serif;
   text-align: center;
-  background-color: #333;
+  background-color: #333333;
   color: #fff;
+  padding: 20px 0;
   z-index: 99999;
-  padding: 3% 0 20px;
+  padding-top: 3%;
   width: 100%;
   height: 30%;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 .cookieAcceptBar a {
-  color: #fff;
+  color: #9AB2E5; 
   text-decoration: none;
   font-weight: bold;
 }
 .cookieAcceptBarButton {
   cursor: pointer;
   border: none;
-  background-color: #2387c0;
+  background-color: #3B5794; 
   color: #fff;
   text-transform: uppercase;
   margin-top: 10px;
@@ -483,6 +603,7 @@ label.ur_form_disabled {
   line-height: 40px;
   padding: 0 20px;
 }
+
 /**************************************************/
 /* arrow glyph for showing collapsible panels */
 .panel-heading .accordion-arrow-toggle:before {
@@ -497,7 +618,6 @@ label.ur_form_disabled {
   color: silver;
   padding-top: 15px;
 }
-/* sets the link to the width of the entire panel title */
 .panel-title > a {
   display: block;
 }
@@ -510,8 +630,4 @@ label.ur_form_disabled {
   padding: 5px;
   box-sizing: border-box;
 }
-.demo-img {
-  border: 1px solid;
-  width: 120px;
-  margin: 10px;
-}
+
